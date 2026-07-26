@@ -1,22 +1,80 @@
 aid: easel
-name: Easel
-description: Easel is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+name: Easel AI
+description: Easel AI is a Los Angeles based generative AI company building a consumer
+  app and a partner-facing image generation platform. Its models turn a single selfie
+  into photorealistic single and multiplayer avatars without any per-user AI training,
+  and the same technology is packaged for commercial use as Fashion Photoshoot (AI
+  models of any race or body type wearing any outfit), Fashion Try-On (shoppers upload
+  a picture and see themselves in an outfit instantly), Ad Creator (personalized ad
+  creative from one selfie plus a context image), and Product Photoshoot (products
+  placed in any scenario). Easel ships a consumer iOS app and markets a Try-On API
+  and ad-generation API to fashion brands, ad platforms, messaging apps, dating and
+  social apps, and talent agencies monetizing digital IP. As of this pass the API
+  surface is partner-gated and contact-sales only - there is no public developer portal,
+  documentation, API reference, machine-readable specification, or self-serve signup
+  published on the website. Easel appears on the a16z investment list.
 url: https://raw.githubusercontent.com/api-evangelist/easel/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - a16z
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: partner-gated-api-no-public-developer-surface
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://easelapps.ai/easel.svg
 tags:
 - Company
+- Artificial Intelligence
+- Generative AI
+- Image Generation
+- Avatars
+- Fashion
+- Virtual Try-On
+- Advertising
+- Computer Vision
+- Consumer Applications
 apis: []
+common:
+- type: DomainSecurity
+  url: security/easel-domain-security.yml
+- type: Website
+  url: https://easelapps.ai/
+- type: TermsOfService
+  url: https://easelapps.ai/terms
+- type: PrivacyPolicy
+  url: https://easelapps.ai/privacy
+- type: Support
+  url: mailto:hello@easelapps.ai
+- type: iOSApp
+  url: https://apps.apple.com/us/app/easel-ai/id6448734086
+- type: Twitter
+  url: https://x.com/easelai_app
+- type: Instagram
+  url: https://www.instagram.com/easelai_app/
+- type: WellKnown
+  url: well-known/easel-well-known.yml
+- type: LLMsTxt
+  url: llms/easel-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1

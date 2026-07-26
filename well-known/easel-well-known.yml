@@ -1,0 +1,61 @@
+generated: '2026-07-20'
+method: searched
+source: https://easelapps.ai/
+host: https://easelapps.ai
+notes: >-
+  easelapps.ai is a single-page application whose server returns the SPA shell
+  (HTTP 200, content-type text/html) for every unmatched path. Every
+  /.well-known/ probe below therefore returned 200 with the index.html body, not
+  the requested document. These are soft-404s: NO well-known document is actually
+  published. Nothing was saved verbatim because nothing real was served.
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  content_type: text/html
+  published: false
+  result: spa-fallback
+- path: /.well-known/openid-configuration
+  status: 200
+  content_type: text/html
+  published: false
+  result: spa-fallback
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  content_type: text/html
+  published: false
+  result: spa-fallback
+- path: /.well-known/api-catalog
+  status: 200
+  content_type: text/html
+  published: false
+  result: spa-fallback
+- path: /.well-known/ai-plugin.json
+  status: 200
+  content_type: text/html
+  published: false
+  result: spa-fallback
+other_probes:
+- path: /llms.txt
+  status: 200
+  published: false
+  result: spa-fallback
+- path: /openapi.json
+  status: 200
+  published: false
+  result: spa-fallback
+- path: /robots.txt
+  status: 200
+  published: false
+  result: spa-fallback
+- path: /sitemap.xml
+  status: 200
+  published: false
+  result: spa-fallback
+- path: /docs
+  status: 200
+  published: false
+  result: spa-fallback
+- path: /developers
+  status: 200
+  published: false
+  result: spa-fallback

@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: easelapps.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan  7 23:59:59 2027 GMT
+  hsts: true
+  hsts_max_age: 10886400
+domains:
+- domain: easelapps.ai
+  dnssec: true
+  caa: []
+  caa_note: >-
+    No CAA record is published. The probe script initially recorded four values
+    here, but `dig CAA easelapps.ai` follows the apex CNAME to Azure Static Web
+    Apps and returns that CNAME chain (icy-sand-0a3bac010.1.azurestaticapps.net
+    -> azurestaticapps1.trafficmanager.net ->
+    msha-slice-1-eus2-0.msha-slice-1-eus2-0-ase.p.azurewebsites.net ->
+    waws-prod-bn1-d5bb8b62.sip.p.azurewebsites.windows.net), not CAA data.
+    Corrected by hand on 2026-07-20.
+  spf: false
+  dmarc: true
+  dmarc_policy: none
+  hosting: Azure Static Web Apps (apex CNAME)
