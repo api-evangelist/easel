@@ -64,38 +64,81 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Easel AI is a Los Angeles based generative AI company. Its models turn a single selfie into photorealistic single and multiplayer avatars with no per-user AI training, and package that capability for brands as Fashion Photoshoot, Fashion Try-On, Ad Creator, and Product Photoshoot. Easel ships a consumer iOS app and markets its APIs to fashion brands, ad platforms, messaging apps, dating and social apps, and talent agencies.
+Easel AI is a Los Angeles based generative AI company building a consumer app and a partner-facing image generation platform. Its models turn a single selfie into photorealistic single and multiplayer avatars without any per-user AI training, and the same technology is packaged for commercial use as Fashion Photoshoot (AI models of any race or body type wearing any outfit), Fashion Try-On (shoppers upload a picture and see themselves in an outfit instantly), Ad Creator (personalized ad creative from one selfie plus a context image), and Product Photoshoot (products placed in any scenario). Easel ships a consumer iOS app and markets a Try-On API and ad-generation API to fashion brands, ad platforms, messaging apps, dating and social apps, and talent agencies monetizing digital IP. As of this pass the API surface is partner-gated and contact-sales only - there is no public developer portal, documentation, API reference, machine-readable specification, or self-serve signup published on the website. Easel appears on the a16z investment list.
 
-- Website: https://easelapps.ai/
-- iOS app: https://apps.apple.com/us/app/easel-ai/id6448734086
-- Contact: hello@easelapps.ai
-- Backed by: a16z (appears on the a16z investment list)
+**Areas:** Company · Artificial Intelligence · Generative AI · Image Generation · Avatars · Fashion · Virtual Try-On · Advertising · Computer Vision · Consumer Applications
 
-## API status: partner-gated, no public developer surface
+## Easel AI on APIs.io
 
-Easel explicitly markets APIs — the site says "Looking to partner on our APIs?", "Fashion brands can integrate Try-On API on their website or styling app", and "Ad platforms can integrate Easel's API". But as of the 2026-07-20 enrichment pass, none of it is public. Verified absent:
+Everything profiled for Easel AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/easel/](https://apis.io/providers/easel/)** — or go straight to one of the APIs or properties below.
 
-| Surface | Result |
-| --- | --- |
-| Developer portal / docs / API reference | none published |
-| OpenAPI / AsyncAPI / GraphQL spec | none |
-| Self-serve signup, pricing, sandbox | none |
-| SDKs / packages (npm, PyPI checked) | none first-party |
-| CLI, changelog, status page, roadmap | none |
-| `/.well-known/*`, `llms.txt`, `robots.txt`, `sitemap.xml` | none — see below |
-| Public GitHub org | unconfirmed (see note) |
-| Vulnerability disclosure program / trust center | none found |
+### Published properties
 
-`easelapps.ai` is a single-page app on Azure Static Web Apps that returns the SPA shell (HTTP 200, `text/html`) for every unmatched path, so every discovery probe is a soft-404. `well-known/easel-well-known.yml` records this honestly rather than treating the 200s as hits.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-**GitHub note:** `github.com/easel-ai` exists ("Empowering artists and businesses with advanced image editing tools") but has 0 public repos and lists `easel.ai` as its site — a domain now parked and for sale. The link to `easelapps.ai` could not be confirmed, so no `GitHubOrganization` pointer was emitted.
+#### Security (1)
 
-## Artifacts in this repo
+Authentication, trust centre, and vulnerability disclosure.
 
-- `well-known/easel-well-known.yml` — discovery probe results (all soft-404, searched)
-- `llms/easel-llms.txt` — generated llms.txt from the catalog + site copy
-- `security/easel-domain-security.yml` — probed TLS 1.3, HSTS (max-age 10886400), DNSSEC on, no SPF, DMARC `p=none`, no CAA
+- [Easel Domain Security](https://apis.io/security/easel/easel-domain-security/)
 
-## Next pass
+## Where to find this API
 
-Re-check for a developer portal, docs, or a published Try-On API reference. The commercial framing (contact sales for API partnership) suggests a private beta that may open up.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://easelapps.ai/)
+- [Terms of service](https://easelapps.ai/terms)
+- [Privacy policy](https://easelapps.ai/privacy)
+
+## API Evangelist rating
+
+**Kin Score 4.6** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.5** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/easel/](https://apis.io/providers/easel/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Easel AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/easel/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
